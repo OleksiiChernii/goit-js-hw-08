@@ -10,7 +10,7 @@ loadState();
 
 formRef.addEventListener('input', event => {
     if(event.target.name === 'email'){
-        console.log('email = ', event.target.value)
+        console.log('email = ', event.target.value);
         state.email = event.target.value;
     }
     if(event.target.name === 'message'){
@@ -35,6 +35,6 @@ function loadState(){
     if(!currentState){
         return;
     }
-    formRef[0].value = currentState.email;
-    formRef[1].value = currentState.message;
+    formRef[0].value = state.email = currentState.email;
+    formRef[1].value = state.message = currentState.message;
 }
